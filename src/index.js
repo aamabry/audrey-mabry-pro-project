@@ -58,5 +58,5 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSearchSubmit);
 
 
-searchCity("Paris");
+searchCity("New York");
 
