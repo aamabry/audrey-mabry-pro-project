@@ -1,6 +1,6 @@
 function search(event) {
   event.preventDefault();
-  let searchInputElement = document.querySelector("#search-form-input");
+  let searchInputElement = document.querySelector("#search-input");
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = searchInputElement.value;
   apiCity = searchInputElement.value;
@@ -34,18 +34,18 @@ function formatDate(date) {
   return `${formattedDay} ${hours}:${minutes}`;
 }
 
-function showWeather(response) {
-  let temperatureElement = document.querySelector("#temperature");
+function showTemperature(response) {
+  let temperatureElement = document.querySelector("#api-temperature");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 }
 
 function fetchData() {
   let apiKey = "1b509431b344bbaa8c5fo44ef08bca6t";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${apiCity}&key=${apiKey}`;
-  axios.get(apiUrl).then(showWeather);
+  axios.get(apiUrl).then(showTemperature);
 }
 
-let searchForm = document.querySelector("#search-form-button");
+let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
 let currentDateELement = document.querySelector("#current-date");
