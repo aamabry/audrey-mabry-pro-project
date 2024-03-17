@@ -37,7 +37,7 @@ function showWeather(response) {
   currentDateELement.innerHTML = formatDate(currentDate);
   temperatureElement.innerHTML = Math.round(temperature);
   descriptionElement.innerHTML = response.data.condition.description;
-  cityElement.innerHTML = searchInputElement.value;
+  cityElement.innerHTML = response.data.city;
 
 }
 
