@@ -5,7 +5,7 @@ function search(event) {
   let descriptionElement = document.querySelector("#description");
 
   cityElement.innerHTML = searchInputElement.value;
-  descriptionElement.innerHTML = response.data.condition.description;
+  descriptionElement.innerHTML = descriptionElement.value;
   apiCity = searchInputElement.value;
   fetchData();
 }
