@@ -23,8 +23,8 @@ function formatDate(date) {
     "Saturday",
   ];
 
-  let formattedDay = days[day];
-  return `${formattedDay} ${hours}:${minutes}`;
+  
+  return `${day} ${hours}:${minutes}`;
 }
 
 function showWeather(response) {
