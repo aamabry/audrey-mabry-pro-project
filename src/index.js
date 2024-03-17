@@ -34,9 +34,11 @@ function showWeather(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
-  let currentDateELement = document.querySelector("#current-date");
-  let currentDate = new Date();
-  currentDateELement.innerHTML = formatDate(currentDate);
+  let timeElement = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
+
+
+  timeElement.innerHTML = format(date);
   temperatureElement.innerHTML = Math.round(temperature);
   descriptionElement.innerHTML = response.data.condition.description;
   cityElement.innerHTML = response.data.city;
