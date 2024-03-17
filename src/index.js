@@ -2,7 +2,10 @@ function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");
   let cityElement = document.querySelector("#current-city");
+  let descriptionElement = document.querySelector("#description");
+
   cityElement.innerHTML = searchInputElement.value;
+  descriptionElement.innerHTML = response.data.condition.description;
   apiCity = searchInputElement.value;
   fetchData();
 }
