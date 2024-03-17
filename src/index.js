@@ -32,6 +32,9 @@ function showWeather(response) {
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#current-city");
   let descriptionElement = document.querySelector("#description");
+  let currentDateELement = document.querySelector("#current-date");
+  let currentDate = new Date();
+  currentDateELement.innerHTML = formatDate(currentDate);
   temperatureElement.innerHTML = Math.round(temperature);
   descriptionElement.innerHTML = response.data.condition.description;
   cityElement.innerHTML = searchInputElement.value;
@@ -44,9 +47,14 @@ function searchCity(city) {
   axios.get(apiUrl).then(showWeather);
 }
 
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-input");
+
+  searchCity(searchInput.value);
+}
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
-let currentDateELement = document.querySelector("#current-date");
-let currentDate = new Date();
-currentDateELement.innerHTML = formatDate(currentDate);
+
