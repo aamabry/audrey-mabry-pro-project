@@ -34,7 +34,7 @@ function formatDate(date) {
   return `${formattedDay} ${hours}:${minutes}`;
 }
 
-function showWeather(response) {
+function showTemperature(response) {
   let temperatureElement = document.querySelector("#api-temperature");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 }
@@ -42,7 +42,7 @@ function showWeather(response) {
 function fetchData() {
   let apiKey = "1b509431b344bbaa8c5fo44ef08bca6t";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${apiCity}&key=${apiKey}`;
-  axios.get(apiUrl).then(showWeather);
+  axios.get(apiUrl).then(showTemperature);
 }
 
 let searchForm = document.querySelector("#search-form");
