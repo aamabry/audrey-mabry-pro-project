@@ -35,7 +35,7 @@ function formatDate(date) {
 }
 
 function showWeather(response) {
-  let temperatureElement = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#api-temperature");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 }
 
