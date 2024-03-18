@@ -66,6 +66,27 @@ main {
   color: #f65282;
 }
 
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+}
+
+.weather-forecast-temperature-max {
+  font-size: 13px;
+}
+
+.weather-forecast-temperature-min {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+
+}
 .weather-app-temperature-container {
   display: flex;
 }
