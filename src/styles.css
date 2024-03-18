@@ -87,7 +87,6 @@ main {
 }
 
 .weather-forecast-date {
-  display: flex;
   text-align: center;
   color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
@@ -102,10 +101,13 @@ main {
 
 .weather-forecast-temperatures {
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
   color: #f65282;
 }
+
 .weather-forecast-temperature {
-  padding: 0 10px;
+  padding-left: 10px;
 }
 
 footer {
@@ -113,4 +115,10 @@ footer {
   font-size: 14px;
   padding: 30px 0 0 0;
   color: rgba(39, 33, 66, 0.4);
+}
+
+.weather-forecast{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
