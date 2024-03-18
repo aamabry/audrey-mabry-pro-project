@@ -22,8 +22,7 @@
             placeholder="Enter a city.."
             required
             class="search-form-input"
-            id="search-input"
-          />
+            id="search-input"/>
           <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
@@ -31,21 +30,10 @@
         <div class="current-weather">
           <div>
             <h1 class="current-city" id="current-city"></h1>
-            
             <p class="current-details">
               <span id="time">Sunday 11:28</span> <span id="description">, sunny</span><br />
               Humidity: <strong id="humidity">66%</strong> Wind:<strong id="wind-speed"> 9 km/h</strong>
             </p>
-            <div class ="weather-forecast">
-            <div class="row">
-              <div class="col-2">
-                <div class="weather-forecast-date">Thu</div>
-                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" width="36"/>
-                <span class="weather-forecast-temperature-max">18°</span>
-                <span class="weather-forecast-temperature-min">12°</span>
-              </div>
-            </div>
-          </div>
           </div>
           <div class="weather-app-temperature-container">
           <div id="icon"></div>
@@ -53,6 +41,8 @@
            <div class="current-temperature-unit">°F</div>
         </div>
         </div>
+              <div class="weather-forecast" id="forecast"></div>
+        </main>
       </main>
       <footer>
         <p>
